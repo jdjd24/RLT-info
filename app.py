@@ -32,7 +32,7 @@ protocols = [
         "indication": "Skin rejuvenation",
         "study": "Wunsch et al. (2014)",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5215870/",
-        "wavelength": "633 nm (Red)",
+        "wavelength": "633 nm (Red)",
         "dose": 8.0,
         "frequency": 2,
         "quality": 9.5,
@@ -42,7 +42,7 @@ protocols = [
         "indication": "Skin rejuvenation",
         "study": "Couturaud et al. (2023)",
         "url": "https://doi.org/10.1089/photob.2022.0080",
-        "wavelength": "660 nm & 590 nm (Red/Amber)",
+        "wavelength": "660 nm & 590 nm (Red/Amber)",
         "dose": 9.0,
         "frequency": 2,
         "quality": 9.0,
@@ -51,82 +51,82 @@ protocols = [
     # Wound healing
     {
         "indication": "Wound healing",
-        "study": "Al-Watban & Zhang (2004)",
+        "study": "Al‑Watban & Zhang (2004)",
         "url": "https://doi.org/10.1089/104454704773639536",
-        "wavelength": "633 nm (Red)",
+        "wavelength": "633 nm (Red)",
         "dose": 5.0,
         "frequency": 7,
         "quality": 8.5,
-        "notes": "5 J/cm² fastest closure; 10–16 J/cm² impaired healing (biphasic observed)."
+        "notes": "5 J/cm² fastest closure; 10–16 J/cm² impaired healing (biphasic observed)."
     },
     {
         "indication": "Wound healing",
         "study": "de Abreu Chaves et al. (2014)",
         "url": "https://doi.org/10.1590/abd1806-4841.20142869",
-        "wavelength": "632–830 nm (Red/NIR mix)",
+        "wavelength": "632–830 nm (Red/NIR mix)",
         "dose": 4.0,
         "frequency": 6,
         "quality": 8.0,
-        "notes": "Systematic review: consistent ↑ granulation and angiogenesis with 4 J/cm²."
+        "notes": "Systematic review: consistent ↑ granulation and angiogenesis with 4 J/cm²."
     },
     # Joint pain
     {
         "indication": "Joint pain",
         "study": "Stausholm et al. (2019)",
         "url": "https://bmjopen.bmj.com/content/9/9/e031142",
-        "wavelength": "785–860 nm (NIR)",
+        "wavelength": "785–860 nm (NIR)",
         "dose": 6.0,
         "frequency": 3,
         "quality": 9.0,
-        "notes": "Meta-analysis: ~30% greater pain reduction and 10-point WOMAC improvement."
+        "notes": "Meta‑analysis: ~30% greater pain reduction and 10‑point WOMAC improvement."
     },
     {
         "indication": "Joint pain",
         "study": "Malik et al. (2014)",
         "url": "https://doi.org/10.1002/lsm.22225",
-        "wavelength": "640 nm & 904 nm (Red/NIR)",
+        "wavelength": "640 nm & 904 nm (Red/NIR)",
         "dose": 4.0,
         "frequency": 2,
         "quality": 8.5,
-        "notes": "4 J/cm² per point improved pain and ROM in knee osteoarthritis."
+        "notes": "4 J/cm² per point improved pain and ROM in knee osteoarthritis."
     },
     # Muscle recovery
     {
         "indication": "Muscle recovery",
         "study": "Rossato et al. (2020)",
         "url": "https://doi.org/10.1089/photob.2019.4935",
-        "wavelength": "660 nm & 850 nm (Red/NIR)",
+        "wavelength": "660 nm & 850 nm (Red/NIR)",
         "dose": 4.0,
         "frequency": 7,
         "quality": 8.5,
-        "notes": "Crossover RCT: 135 J total (~4 J/cm²) improved fatigue resistance equally vs higher doses."
+        "notes": "Crossover RCT: 135 J total (~4 J/cm²) improved fatigue resistance equally vs higher doses."
     },
     {
         "indication": "Muscle recovery",
         "study": "Vanin et al. (2018)",
         "url": "https://doi.org/10.1097/PHM.0000000000000945",
-        "wavelength": "650–670 nm & 808–830 nm (Red/NIR)",
+        "wavelength": "650–670 nm & 808–830 nm (Red/NIR)",
         "dose": 5.0,
         "frequency": 5,
         "quality": 8.0,
-        "notes": "Meta-analysis: reduces DOMS and CK by ~8%, improves strength recovery at 24–48 h."
+        "notes": "Meta‑analysis: reduces DOMS and CK by ~8%, improves strength recovery at 24–48 h."
     },
     # Whole-body wellness
     {
         "indication": "Whole-body wellness",
         "study": "Ghigiarelli et al. (2020)",
         "url": "https://www.frontiersin.org/articles/10.3389/fspor.2020.00048/full",
-        "wavelength": "660 nm & 850 nm (Red/NIR bed)",
+        "wavelength": "660 nm & 850 nm (Red/NIR bed)",
         "dose": 25.0,
         "frequency": 3,
         "quality": 7.0,
-        "notes": "Full-body PBM in athletes: no significant CK or IL-6 change; well tolerated."
+        "notes": "Full-body PBM in athletes: no significant CK or IL‑6 change; well tolerated."
     },
     {
         "indication": "Whole-body wellness",
         "study": "Insomnia PBM pilot (2022)",
         "url": "https://doi.org/10.1002/jsm2.12345",
-        "wavelength": "670 nm (Red)",
+        "wavelength": "670 nm (Red)",
         "dose": 20.0,
         "frequency": 5,
         "quality": 6.5,
@@ -138,7 +138,6 @@ def make_df(indication):
     rows = []
     for p in protocols:
         if p["indication"] == indication:
-            # calculate treatment time in seconds and minutes
             t_s = p["dose"] / (I_actual / 1000)
             t_m = t_s / 60
             rows.append({
@@ -160,6 +159,6 @@ for indic in sorted({p["indication"] for p in protocols}):
     st.table(df_ind)
 
 st.caption(
-    f"Actual irradiance at {d_intended:.1f} in: {I_actual:.1f} mW/cm² "
-    "(inverse-square adjusted from reference reading)."
+    f"Actual irradiance at {d_intended:.1f} in: {I_actual:.1f} mW/cm² "
+    "(inverse‑square adjusted from reference reading)."
 )
