@@ -138,17 +138,17 @@ def make_df(indication):
     rows = []
     for p in protocols:
         if p["indication"] == indication:
-            t_s = p["dose"] / (I_actual / 1000)
+            t_s = p['dose'] / (I_actual / 1000)
             t_m = t_s / 60
             rows.append({
                 "Study": f"[{p['study']}]({p['url']})",
-                "Wavelength": p["wavelength"],
-                "Dose (J/cm²)": f"{p['dose']:.1f}",
-                "Freq (×/week)": p["frequency"],
+                "Wavelength": p['wavelength'],
+                "Dose (J/cm²)": f"{p['dose']:.0f}",
+                "Freq (×/week)": f"{p['frequency']:.0f}",
                 "Session Time (min)": f"{t_m:.1f}",
-                "Distance (in)": f"{d_intended:.1f}",
-                "Quality": p["quality"],
-                "Notes": p["notes"],
+                "Distance (in)": f"{d_intended:.0f}",
+                "Quality": f"{p['quality']:.0f}",
+                "Notes": p['notes'],
             })
     df = pd.DataFrame(rows)
     return df.sort_values("Quality", ascending=False)
@@ -159,6 +159,6 @@ for indic in sorted({p["indication"] for p in protocols}):
     st.table(df_ind)
 
 st.caption(
-    f"Actual irradiance at {d_intended:.1f} in: {I_actual:.1f} mW/cm² "
+    f"Actual irradiance at {d_intended:.0f} in: {I_actual:.1f} mW/cm² "
     "(inverse‑square adjusted from reference reading)."
 )
