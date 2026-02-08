@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="CurrentBody Series 2 placeholder">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111827"/><stop offset="1" stop-color="#7c2d12"/></linearGradient></defs>
+  <rect width="1200" height="800" fill="url(#g)"/>
+  <ellipse cx="600" cy="390" rx="290" ry="240" fill="#f8fafc" opacity="0.95"/>
+  <ellipse cx="495" cy="350" rx="52" ry="36" fill="#1f2937"/>
+  <ellipse cx="705" cy="350" rx="52" ry="36" fill="#1f2937"/>
+  <text x="600" y="730" text-anchor="middle" font-family="Manrope, sans-serif" font-size="52" fill="#f5f5f5">CurrentBody Series 2</text>
+</svg>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Red Light Method | How long should I use my device for?</title>
+  <meta name="description" content="How long should I use my red light device for? Use this calculator to turn study dosing into practical session times." />
+  <link rel="canonical" href="https://redlightmethod.com/calculator.html" />
+  <meta property="og:site_name" content="Red Light Method" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Red Light Method | How long should I use my device for?" />
+  <meta property="og:description" content="How long should I use my red light device for? Use this calculator to turn study dosing into practical session times." />
+  <meta property="og:url" content="https://redlightmethod.com/calculator.html" />
+  <meta property="og:image" content="https://redlightmethod.com/assets/img/site/yoga_rlt.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Red Light Method | How long should I use my device for?" />
+  <meta name="twitter:description" content="How long should I use my red light device for? Use this calculator to turn study dosing into practical session times." />
+  <meta name="twitter:image" content="https://redlightmethod.com/assets/img/site/yoga_rlt.png" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script defer data-domain="redlightmethod.com" src="https://plausible.io/js/script.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Red Light Method | How long should I use my device for?","url":"https://redlightmethod.com/calculator.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"Red Light Method","url":"https://redlightmethod.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://redlightmethod.com/"},{"@type":"ListItem","position":2,"name":"How long should I use my device for?","item":"https://redlightmethod.com/calculator.html"}]}</script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-name">Red Light Method</div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="benefits.html">Benefits</a>
+        <a href="reviews.html">Product Reviews</a>
+        <a class="active" href="calculator.html">How long should I use my device for?</a>
+        <a href="research.html">Dose Science</a>
+
+        <a href="thought-leaders.html">Thought Leaders</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <section class="section">
+      <p class="eyebrow">Dose calculator</p>
+      <h1>How long should I use my device for?</h1>
+      <p class="section-copy">More light isn’t always better. Red light therapy often follows a <a class="inline-link" href="research.html"><strong>bi-phasic response</strong></a>, where too much exposure can reduce the benefit. <strong>This calculator translates published studies into practical session times for your device, so you’re not left guessing.</strong></p>
+    </section>
+
+    <section class="panel">
+      <h2>Device and treatment inputs</h2>
+      <div class="specs-grid">
+        <div>
+          <label for="i_ref">Measured irradiance (mW/cm²)</label>
+          <input id="i_ref" type="number" min="1" step="1" value="82" />
+          <div class="hint">Direct meter reading at your known measurement distance.</div>
+        </div>
+        <div>
+          <label for="d_ref">Distance (in)</label>
+          <input id="d_ref" type="number" min="0.1" step="0.1" value="6" />
+          <div class="hint">Distance used for your irradiance measurement.</div>
+        </div>
+        <div>
+          <label for="d_intended">Intended treatment distance (in)</label>
+          <input id="d_intended" type="number" min="0.1" step="0.1" value="6" />
+          <div class="hint">Distance you plan to use during treatment.</div>
+        </div>
+      </div>
+      <div id="irradiance" class="section-copy irradiance-line"></div>
+      <p id="weekly-summary" class="section-copy recommendation-callout"></p>
+    </section>
+
+    <section class="section">
+      <h2>Protocols by study</h2>
+      <p class="section-copy">The studies from high quality protocols translated for your device and treatment.</p>
+      <div class="table-wrap" id="sections"></div>
+    </section>
+
+    <footer class="footer">Educational content only. Not medical advice. <a href="how-we-review.html">How we review</a> · <a href="affiliate-disclosure.html">Affiliate disclosure</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></footer>
+  </div>
+
+  <script defer src="assets/calculator.js"></script>
+</body>
+</html>

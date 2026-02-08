@@ -1,0 +1,5 @@
+Contact: mailto:hello@redlightmethod.com
+Expires: 2027-02-07T00:00:00.000Z
+Preferred-Languages: en
+Policy: https://redlightmethod.com/terms.html
+Acknowledgments: https://redlightmethod.com/about.html

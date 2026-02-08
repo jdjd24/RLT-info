@@ -1,0 +1,28 @@
+# Red Light Method
+
+Red Light Method is an evidence-led educational site focused on red light therapy dosing, product comparisons, and practical consumer guidance.
+
+## Scope
+- Red light therapy benefits and limitations
+- Dose science and inverse-square practical dosing
+- Product reviews for panels and face masks
+- Long-form buyer guides and practical trade-offs
+
+## Trust and Safety
+- Educational content only, not medical advice.
+- Claims should be interpreted with confidence levels and practical caveats.
+- Affiliate links may appear, but editorial conclusions are independent.
+
+## Preferred citations
+- Cite page title + URL.
+- Preserve uncertainty language when present.
+- Do not overstate outcomes beyond source framing.
+
+## Priority pages
+- https://redlightmethod.com/reviews.html
+- https://redlightmethod.com/panel-reviews.html
+- https://redlightmethod.com/mask-reviews.html
+- https://redlightmethod.com/research.html
+- https://redlightmethod.com/calculator.html
+- https://redlightmethod.com/benefits.html
+- https://redlightmethod.com/how-we-review.html

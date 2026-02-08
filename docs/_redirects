@@ -1,0 +1,5 @@
+http://redlightmethod.com/* https://redlightmethod.com/:splat 301!
+http://www.redlightmethod.com/* https://redlightmethod.com/:splat 301!
+https://www.redlightmethod.com/* https://redlightmethod.com/:splat 301!
+/index.html / 301
+/404 /404.html 200
