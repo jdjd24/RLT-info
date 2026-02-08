@@ -927,6 +927,17 @@ input {
   color: var(--red-deep);
 }
 
+.top-rank.rosette {
+  font-size: 0.82rem;
+  color: #fff;
+  background: var(--red-deep);
+  border-radius: 999px;
+  padding: 5px 10px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
 .footer {
   margin-top: 34px;
   padding-top: 20px;
