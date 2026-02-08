@@ -75,14 +75,19 @@ def check_sitemap() -> list[str]:
     urls = [u.findtext("sm:loc", default="", namespaces=ns) for u in root.findall("sm:url", ns)]
     expected = {
         "https://theredlightmethod.com/",
-        "https://theredlightmethod.com/benefits.html",
-        "https://theredlightmethod.com/reviews.html",
-        "https://theredlightmethod.com/panel-reviews.html",
-        "https://theredlightmethod.com/mask-reviews.html",
-        "https://theredlightmethod.com/research.html",
-        "https://theredlightmethod.com/calculator.html",
-        "https://theredlightmethod.com/thought-leaders.html",
-        "https://theredlightmethod.com/about.html",
+        "https://theredlightmethod.com/benefits",
+        "https://theredlightmethod.com/reviews",
+        "https://theredlightmethod.com/panel-reviews",
+        "https://theredlightmethod.com/mask-reviews",
+        "https://theredlightmethod.com/research",
+        "https://theredlightmethod.com/calculator",
+        "https://theredlightmethod.com/thought-leaders",
+        "https://theredlightmethod.com/about",
+        "https://theredlightmethod.com/best-red-light-therapy-panel-for-home",
+        "https://theredlightmethod.com/best-red-light-therapy-mask",
+        "https://theredlightmethod.com/red-light-therapy-panel-vs-mask",
+        "https://theredlightmethod.com/mitopro-vs-hooga-vs-blockbluelight",
+        "https://theredlightmethod.com/red-light-therapy-dosing-mistakes",
     }
     missing = sorted(expected.difference(set(urls)))
     for url in missing:

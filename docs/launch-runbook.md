@@ -16,6 +16,7 @@
 
 ## Local preflight before push
 Run these from the repo root:
+- `python3 scripts/preflight.py && python3 scripts/validate_schema.py`
 - `python3 scripts/preflight.py`
 - `python3 scripts/validate_schema.py`
 
