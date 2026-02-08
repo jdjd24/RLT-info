@@ -29,7 +29,7 @@ jobs:
       - name: Install test tooling
         run: |
           npm init -y
-          npm install --save-dev @lhci/cli pa11y-ci serve
+          npm install --no-audit --no-fund --save-dev @lhci/cli pa11y-ci serve
 
       - name: Start static server
         run: npx serve docs -l 4173 &
@@ -71,7 +71,8 @@ jobs:
             }
           }
           JSON
-          npx lhci autorun --config=lighthouserc.json
+          npx lhci collect --config=lighthouserc.json
+          npx lhci assert --config=lighthouserc.json
 
       - name: Basic accessibility scan
         run: |
