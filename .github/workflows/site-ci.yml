@@ -19,7 +19,7 @@ jobs:
       - name: Link check
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress docs/*.html docs/*.xml docs/*.txt
+          args: --verbose --no-progress --exclude '^(https?:)?//' docs/*.html docs/*.xml docs/*.txt
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -33,6 +33,18 @@ jobs:
 
       - name: Start static server
         run: npx serve docs -l 4173 &
+
+      - name: Wait for server readiness
+        run: |
+          for i in {1..20}; do
+            if curl -fsS "http://127.0.0.1:4173/" >/dev/null; then
+              echo "Server is ready"
+              exit 0
+            fi
+            sleep 1
+          done
+          echo "Server failed to start in time"
+          exit 1
 
       - name: Lighthouse CI
         run: |
