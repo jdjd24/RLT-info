@@ -1,0 +1,79 @@
+name: Site CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Link check
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --verbose --no-progress docs/*.html docs/*.xml docs/*.txt
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install test tooling
+        run: |
+          npm init -y
+          npm install --save-dev @lhci/cli pa11y-ci serve
+
+      - name: Start static server
+        run: npx serve docs -l 4173 &
+
+      - name: Lighthouse CI
+        run: |
+          cat > lighthouserc.json <<'JSON'
+          {
+            "ci": {
+              "collect": {
+                "numberOfRuns": 1,
+                "url": [
+                  "http://127.0.0.1:4173/",
+                  "http://127.0.0.1:4173/reviews.html",
+                  "http://127.0.0.1:4173/panel-reviews.html",
+                  "http://127.0.0.1:4173/mask-reviews.html"
+                ]
+              },
+              "assert": {
+                "assertions": {
+                  "categories:performance": ["warn", {"minScore": 0.85}],
+                  "categories:seo": ["warn", {"minScore": 0.95}],
+                  "categories:best-practices": ["warn", {"minScore": 0.95}],
+                  "categories:accessibility": ["warn", {"minScore": 0.90}]
+                }
+              }
+            }
+          }
+          JSON
+          npx lhci autorun --config=lighthouserc.json
+
+      - name: Basic accessibility scan
+        run: |
+          cat > .pa11yci <<'JSON'
+          {
+            "defaults": {
+              "standard": "WCAG2AA",
+              "timeout": 30000,
+              "wait": 1000
+            },
+            "urls": [
+              "http://127.0.0.1:4173/",
+              "http://127.0.0.1:4173/reviews.html",
+              "http://127.0.0.1:4173/panel-reviews.html",
+              "http://127.0.0.1:4173/mask-reviews.html"
+            ]
+          }
+          JSON
+          npx pa11y-ci
+
+      - name: Structured data syntax check
+        run: python3 scripts/validate_schema.py
