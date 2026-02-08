@@ -889,11 +889,33 @@ input {
 }
 
 .top-three-card {
+  position: relative;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 14px;
   box-shadow: var(--shadow);
   overflow: hidden;
+}
+
+.top-choice-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  border: 1px solid #c79522;
+  background: linear-gradient(135deg, #f9de78 0%, #f1c34b 52%, #dda52b 100%);
+  color: #3f2a00;
+  font-size: 0.74rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.16);
 }
 
 .top-three-card img {
@@ -925,17 +947,6 @@ input {
   font-size: 1.4rem;
   font-weight: 800;
   color: var(--red-deep);
-}
-
-.top-rank.rosette {
-  font-size: 0.82rem;
-  color: #fff;
-  background: var(--red-deep);
-  border-radius: 999px;
-  padding: 5px 10px;
-  line-height: 1.1;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
 }
 
 .footer {
