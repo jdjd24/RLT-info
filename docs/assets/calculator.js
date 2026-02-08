@@ -252,7 +252,7 @@ function render() {
       <tr>
         <th>Study</th>
         <th>Wavelength</th>
-        <th>Dose (J/cm²)</th>
+        <th>Dose (per session)</th>
         <th>Freq (×/week)</th>
         <th>Session Time (min)</th>
         <th>Total Weekly (min)</th>
