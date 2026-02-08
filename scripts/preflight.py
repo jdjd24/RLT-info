@@ -74,15 +74,15 @@ def check_sitemap() -> list[str]:
     root = ET.parse(path).getroot()
     urls = [u.findtext("sm:loc", default="", namespaces=ns) for u in root.findall("sm:url", ns)]
     expected = {
-        "https://redlightmethod.com/",
-        "https://redlightmethod.com/benefits.html",
-        "https://redlightmethod.com/reviews.html",
-        "https://redlightmethod.com/panel-reviews.html",
-        "https://redlightmethod.com/mask-reviews.html",
-        "https://redlightmethod.com/research.html",
-        "https://redlightmethod.com/calculator.html",
-        "https://redlightmethod.com/thought-leaders.html",
-        "https://redlightmethod.com/about.html",
+        "https://theredlightmethod.com/",
+        "https://theredlightmethod.com/benefits.html",
+        "https://theredlightmethod.com/reviews.html",
+        "https://theredlightmethod.com/panel-reviews.html",
+        "https://theredlightmethod.com/mask-reviews.html",
+        "https://theredlightmethod.com/research.html",
+        "https://theredlightmethod.com/calculator.html",
+        "https://theredlightmethod.com/thought-leaders.html",
+        "https://theredlightmethod.com/about.html",
     }
     missing = sorted(expected.difference(set(urls)))
     for url in missing:

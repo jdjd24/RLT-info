@@ -19,10 +19,10 @@ Red Light Method is an evidence-led educational site focused on red light therap
 - Do not overstate outcomes beyond source framing.
 
 ## Priority pages
-- https://redlightmethod.com/reviews.html
-- https://redlightmethod.com/panel-reviews.html
-- https://redlightmethod.com/mask-reviews.html
-- https://redlightmethod.com/research.html
-- https://redlightmethod.com/calculator.html
-- https://redlightmethod.com/benefits.html
-- https://redlightmethod.com/how-we-review.html
+- https://theredlightmethod.com/reviews.html
+- https://theredlightmethod.com/panel-reviews.html
+- https://theredlightmethod.com/mask-reviews.html
+- https://theredlightmethod.com/research.html
+- https://theredlightmethod.com/calculator.html
+- https://theredlightmethod.com/benefits.html
+- https://theredlightmethod.com/how-we-review.html
