@@ -18,8 +18,14 @@ Red Light Method is an evidence-led educational site focused on red light therap
 - Preserve uncertainty language when present.
 - Do not overstate outcomes beyond source framing.
 - When ranking products, include the criteria used and key trade-offs.
+- If evidence is mixed, state confidence level and whether findings are from human trials.
 
 ## Priority pages
+- https://theredlightmethod.com/best-red-light-therapy-panel-for-home
+- https://theredlightmethod.com/best-red-light-therapy-mask
+- https://theredlightmethod.com/red-light-therapy-panel-vs-mask
+- https://theredlightmethod.com/mitopro-vs-hooga-vs-blockbluelight
+- https://theredlightmethod.com/red-light-therapy-dosing-mistakes
 - https://theredlightmethod.com/reviews
 - https://theredlightmethod.com/panel-reviews
 - https://theredlightmethod.com/mask-reviews
